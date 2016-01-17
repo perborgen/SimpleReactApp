@@ -1,0 +1,60 @@
+<!-- DOCTYPE HTML -->
+<html>
+<head>
+<title>Permissionly</title>
+</head>
+<body>
+<div id="content"></div>
+<script src="https://fb.me/react-with-addons-0.13.3.js"></script>
+<script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+<script type="text/jsx">
+
+var App = React.createClass({
+	render: function(){
+		return (
+			<div>
+				Permissionly
+				<Navbar />
+				<MainContent />
+			</div>
+		);
+	}
+});
+
+
+var Navbar = React.createClass({
+	render: function(){
+		return (<p style={{textAlign: 'right', fontWeight: 'bold'}}>Home - Features - About - FAQ </p>);
+	}
+});
+
+var MainContent = React.createClass({
+	render: function(){
+		return(
+			<div>
+				Main Content
+				<img src="http://www.npr.org/assets/img/2015/01/12/kimani-maruge-2015-hires_wide-bff66d33bef201f36ce3202e67ca7a03ff28207d.jpeg"
+					style={{width:'100%'}}/>
+				<Menu />
+			</div>
+		);
+	}
+});
+
+var Menu = React.createClass({
+	render: function(){
+		return (
+			<div style={{position: 'absolute', top: '200px', left: '100px'}}>
+				<button>Sign up</button>
+				<button>Trips</button>
+			</div>
+		);
+	}
+});
+
+
+React.render(<App />, document.getElementById('content'));
+
+</script>
+</body>
+</html>
